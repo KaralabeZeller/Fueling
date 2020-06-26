@@ -1,0 +1,140 @@
+//===============================================
+// Benzin vezérlõ LCD stringek
+//-----------------------------------------------
+//-----------------------------------------------Global
+"Vissza"
+"Rendben"
+//-----------------------------------------------Fõmenü:Alap
+"Válasszon kutat"
+"RATIO HOMINI KFT"
+"Tel.: 36 30 4336686"
+//-----------------------------------------------Státusz kijelzés
+"Kikapcsolva"
+"Fej fent"
+"Fej fent-Sum1"
+"Fej fent-Sum2"
+"Fej lent"
+"Tankolás-ki"
+"Tankolás-be"
+"Vége: limit"
+"Vége: fej"
+"Vége: idõhatár"
+"Vége: Lopás!!!"
+"Vége: Feszültség hiba!"
+"Mentés: limit"
+"Mentés: fej"
+"Mentés: idõhatár"
+"Mentés: Lopás!!!"
+"Mentés: Feszültség hiba!"
+"Újra vár"
+"Rossz státusz!"
+"Tankolás"
+//-----------------------------------------------Kártya bevitel
+"  .Kútfõ:"
+"Kártya HIBA"
+"Kérem a kártyát"
+"Kérem a kártyákat"
+"Név:"
+"Jármû:"
+"PIN kód: ____    "
+" NévKód"
+//-----------------------------------------------Km óra bevitel
+"Km óra állása:"
+"Az elõzõnél nem lehet kisebb! "
+"Kérem mégegyszer!             "
+"Az két érték különbözik!      "
+//-----------------------------------------------Menetlevél bevitel
+"Menetlevél száma:"
+//-----------------------------------------------Tankolhat
+"Mai nap         .tankolás"
+"Tankolhat       litert"
+"      még       -szer."
+//-----------------------------------------------Üzemóra bevitel
+"Üzemóra állása:"
+//-----------------------------------------------Mester kártya bevitel
+"Jármû kártya kódja:"
+"Vissza                Nem kell"
+"Vissza                        "
+"Töröl                         "
+"Töröl                  Rendben"
+//-----------------------------------------------Menetlevél bevitel
+"Sofõr kódja:"
+//-----------------------------------------------Hiba:Kártya
+"Kártya HIBA"
+//-----------------------------------------------Hiba:Kimerítve
+"Napi megengedett"
+"tankolások száma"
+"   kimerítve."
+//-----------------------------------------------Hiba:Rossz kártya a kútfõhöz
+"Ezzel a kártyával"
+"  ezen a kútfõn"
+" NEM TANKOLHAT !"
+//-----------------------------------------------Szerviz:Belépés
+"Kérem a szerviz kártyát:"
+//-----------------------------------------------Szerviz
+"Szerviz menü:"
+"1-Kútfõk       2-Kártya inf."
+"3-Beállítások  4-Változók."
+"5-Rendszer "
+//-----------------------------------------------Szervíz:Kútfõk
+"Kútfõk:     1-15 kutak be/ki"
+//-----------------------------------------------Szerviz:Kártyák
+"Kártya információk:"
+"1 - Kártyák száma"
+"Egykártyás rendszer"
+"Kétkártyás rendszer"
+//-----------------------------------------------Szerviz:Beállítások
+"Beállítások:"
+"1-Kijelzések   2-Kontraszt"
+"3-Idõ"
+"4-Testre szabás"
+//-----------------------------------------------Szerviz:Beállítás:Literkijelzés
+"Kijelzések:"
+"1 - Liter kijelzés: BE"
+"1 - Liter kijelzés: KI"
+//-----------------------------------------------Szerviz:Beállítás:Kontraszt
+"Kontraszt:"
+"1 - csökkent       3 - növel"
+"Hõmérséklet:"
+"7 - k csökkent     9 - k növel"
+//-----------------------------------------------Szerviz:Testreszabás
+"Testre szabás:"
+"1 - Km bekérés: BE-növekvõ"
+"1 - Km bekérés: BE"
+"1 - Km bekérés: KI"
+"2 - Menetlevél bekérés: BE"
+"2 - Menetlevél bekérés: KI"
+"3 - Üzemóra bekérés: BE"
+"3 - Üzemóra bekérés: KI"
+//-----------------------------------------------Szerviz:Változók
+"Változók kijelzése:"
+"Tankolások száma:"
+"Kártyák száma:"
+"Cégek száma:"
+//-----------------------------------------------Szerviz:Rendszer
+"Rendszer:"
+"Fejlesztés alatt"
+//-----------------------------------------------Nyomtatóra
+"Eladó:"
+"Vevõ:"
+"Mérés kezdete: 20__.__.__ __:__:__"
+"Mérés vége   : 20__.__.__ __:__:__"
+"Személy    : ____________________ "
+"Rendszám   : ____________________ "
+"Kilométer          :   ________ km"
+"Üzemóra            :   ________ ó "
+"Menetlevél         :   ________   "
+"Kimérés sorszáma Nr:     _____/_  "
+"Számláló állása   V:__________,__l"
+"Összegezett mérésVo:__________,__l"
+"Kimért mennyiség   Vt: ______,__ l"
+"Termékhõmérséklet   t:    ___,_ °C"
+"Termék megnevezés:"};
+"    Benzin95 max.10ppm kéntart    "
+"    UN 1202 DIZELOLAJ, 3,III,(D/I)"
+"Bázishõmérséklet   to:     15,0 °C"
+"Mennyiség to-án    Vo: ______,__ l"
+"Egységár (netto):00000000,00 Ft/l"
+"Ár (netto)      :00000000,00 Ft"
+"Ár (brutto)     :00000000,00 Ft"
+//===============================================END

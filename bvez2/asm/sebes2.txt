@@ -1,0 +1,70 @@
+58:                #if		C_SEBESSEG==1
+59:                	uint16	seb;
+60:                	liter= Kut[kut].sebes[0]-Kut[kut].sebes[3];	//4mp 0,01 liter fogyasztása
+
+00C92E  90404E     MOV.B [W14+4], W0			//kut.b
+00C930  FB8080     ZE W0, W1
+00C932  200380     MOV #0x38, W0
+00C934  B98800     MUL.SS W1, W0, W0			//w1= kut*56
+00C936  780000     MOV W0, W0
+00C938  200281     MOV #0x28, W1
+00C93A  408080     ADD W1, W0, W1
+00C93C  213B20     MOV #0x13B2, W0
+00C93E  408000     ADD W1, W0, W0
+00C940  BE0110     MOV.D [W0], W2				//w2,3= sebes[0]
+
+00C942  90404E     MOV.B [W14+4], W0
+00C944  FB8080     ZE W0, W1
+00C946  200380     MOV #0x38, W0
+00C948  B98800     MUL.SS W1, W0, W0
+00C94A  780000     MOV W0, W0
+00C94C  200341     MOV #0x34, W1
+00C94E  408080     ADD W1, W0, W1
+00C950  213B20     MOV #0x13B2, W0
+00C952  408000     ADD W1, W0, W0
+00C954  BE0010     MOV.D [W0], W0				//w0,1= sebes[3]
+
+00C956  510000     SUB W2, W0, W0
+00C958  598081     SUBB W3, W1, W1
+00C95A  980730     MOV W0, [W14+6]				//literL
+00C95C  980741     MOV W1, [W14+8]				//literH
+
+61:                	if(liter > 65000) seb= 65000; else seb= (uint16)liter;//max.650 l/4mp = 9750 l/p
+00C95E  90013E     MOV [W14+6], W2
+00C960  9001CE     MOV [W14+8], W3				//w2,3= liter
+00C962  2FDE80     MOV #0xFDE8, W0
+00C964  200001     MOV #0x0, W1					//w0,1= 65000
+00C966  510F80     SUB W2, W0, [W15]
+00C968  598F81     SUBB W3, W1, [W15]
+00C96A  360003     BRA LEU, 0xC972				//liter-65000 kisebb->
+00C96C  2FDE80     MOV #0xFDE8, W0
+00C96E  980710     MOV W0, [W14+2]
+00C970  370003     BRA 0xC978
+00C972  90003E     MOV [W14+6], W0
+00C974  9000CE     MOV [W14+8], W1
+00C976  980710     MOV W0, [W14+2]
+
+62:                	liter= WmulWtoDW(seb, 9830);//*15/100*65536				//*15(4mp->1p) /100(0.01->1 liter)
+00C978  90001E     MOV [W14+2], W0				//seb
+00C97A  226661     MOV #0x2666, W1				//9830
+00C97C  B80001     MUL.UU W0, W1, W0
+00C97E  980730     MOV W0, [W14+6]
+00C980  980741     MOV W1, [W14+8]				//liter= seb*9830
+
+63:                	seb= *(((uint16*)&liter)+1);//liter/0x10000;
+00C982  470066     ADD W14, #0x6, W0			//sebL
+00C984  E88000     INC2 W0, W0
+00C986  780090     MOV [W0], W1
+00C988  980711     MOV W1, [W14+2]				//sebL= sebH
+64:                	Word_5i_xy(seb, 80, 52);//y:80-177=97(12betu)
+00C98A  B3C342     MOV.B #0x34, W2
+00C98C  B3C501     MOV.B #0x50, W1
+00C98E  90001E     MOV [W14+2], W0
+00C990  0250CC     CALL Word_5i_xy
+00C992  000000     NOP
+65:                	SzovKi(&ScrA2[20]);
+00C994  237A60     MOV #0x37A6, W0
+00C996  02C08A     CALL SzovKi
+00C998  000000     NOP
+00C99A  370001     BRA 0xC99E
+66:                #endif

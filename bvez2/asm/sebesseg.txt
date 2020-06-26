@@ -1,0 +1,76 @@
+//=========================================================
+// p33FJ128GP708a hiba nyomozás
+//=========================================================
+//58:                #if		C_SEBESSEG==1
+//59:                	uint16_t	seb;
+//60:                
+//61:                	liter= Kut[kut].sebes[0]-Kut[kut].sebes[3];	//4mp 0,01 liter fogyasztása
+00C606  90480E     MOV.B [W14+8], W0	//kut
+00C608  FB8080     ZE W0, W1
+00C60A  200380     MOV #0x38, W0		//56b=0x38= Kut len
+00C60C  B98800     MUL.SS W1, W0, W0
+00C60E  780000     MOV W0, W0
+00C610  200281     MOV #0x28, W1		//x28= uint32 sebes[4]
+00C612  408080     ADD W1, W0, W1
+00C614  213B20     MOV #0x13B2, W0		//x13b2=Kut
+00C616  408000     ADD W1, W0, W0
+00C618  BE0110     MOV.D [W0], W2		//w2,w3= Kut[kut].sebes[0]
+//
+00C61A  90480E     MOV.B [W14+8], W0
+00C61C  FB8080     ZE W0, W1
+00C61E  200380     MOV #0x38, W0
+00C620  B98800     MUL.SS W1, W0, W0
+00C622  780000     MOV W0, W0
+00C624  200341     MOV #0x34, W1
+00C626  408080     ADD W1, W0, W1
+00C628  213B20     MOV #0x13B2, W0
+00C62A  408000     ADD W1, W0, W0
+00C62C  BE0010     MOV.D [W0], W0		//w0,w1= Kut[kut].sebes[3]
+//
+00C62E  510000     SUB W2, W0, W0
+00C630  598081     SUBB W3, W1, W1
+00C632  980710     MOV W0, [W14+2]		//literL
+00C634  980721     MOV W1, [W14+4]		//literH
+//
+//62:                	liter*= 15;									//*0,01 l/p
+00C636  90002E     MOV [W14+4], W0
+00C638  B9006F     MUL.SU W0, #15, W0	//***	!!! nem signed !!!
+00C63A  780100     MOV W0, W2			//w2= 15*literH
+00C63C  90001E     MOV [W14+2], W0
+00C63E  B90060     MUL.SU W0, #0, W0
+00C640  780000     MOV W0, W0			//w0= 0*literL
+00C642  410100     ADD W2, W0, W2		//w2= 15*H+0*L
+00C644  90009E     MOV [W14+2], W1
+00C646  2000F0     MOV #0xF, W0
+00C648  B80800     MUL.UU W1, W0, W0	//w0= 15*
+00C64A  410101     ADD W2, W1, W2		//w2= 15*L+15*H+0*L
+00C64C  780082     MOV W2, W1
+00C64E  980710     MOV W0, [W14+2]
+00C650  980721     MOV W1, [W14+4]
+00C652  980710     MOV W0, [W14+2]		//!!! ez mi ???
+00C654  980721     MOV W1, [W14+4]		//!!! ez mi ???
+
+//63:                	liter/= 100;								//*1 l/p
+00C656  90001E     MOV [W14+2], W0
+00C658  9000AE     MOV [W14+4], W1
+00C65A  200642     MOV #0x64, W2
+00C65C  200003     MOV #0x0, W3
+00C65E  0203DC     CALL __udivsi3
+00C660  000000     NOP
+00C662  980710     MOV W0, [W14+2]		//literLo
+00C664  980721     MOV W1, [W14+4]
+//
+//64:                	if(liter > 65000) seb= 65000; else seb= (uint16_t)liter;
+00C666  90011E     MOV [W14+2], W2		//literL
+00C668  9001AE     MOV [W14+4], W3		//literH
+00C66A  2FDE80     MOV #0xFDE8, W0
+00C66C  200001     MOV #0x0, W1
+00C66E  510F80     SUB W2, W0, [W15]
+00C670  598F81     SUBB W3, W1, [W15]
+00C672  360003     BRA LEU, 0xC67A
+00C674  2FDE80     MOV #0xFDE8, W0
+00C676  980730     MOV W0, [W14+6]		//uint16 seb
+00C678  370002     BRA 0xC67E
+00C67A  90019E     MOV [W14+2], W3
+00C67C  980733     MOV W3, [W14+6]		//seb
+//67:                #endif

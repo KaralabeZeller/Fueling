@@ -1,0 +1,142 @@
+//===============================================
+// Benzin vezérlõ LCD stringek
+//-----------------------------------------------
+//-----------------------------------------------Global
+"<<Back" 
+"==OK=="
+//-----------------------------------------------Fõmenü:Alap 
+ "Select Pump"
+ "VRC FUELEXPERTS LTD"
+ "Call 0800 FUELMAN"
+//-----------------------------------------------Státusz kijelzés
+"Out Of Service"
+"Nozzle on"
+"Nozzle on-Sum1" 
+"Nozzle on-Sum2"
+"Nozzle off"
+"Filling-OFF"
+"Filling-ON"
+"Over: Limit"
+"Over: Nozzle"
+"Over: Time Limit"
+"Over: THEFT!"
+"Over: Voltage Error!"
+"Save: Limit"
+"Save: Nozzle"
+"Save: Time Limit"
+"Save: THEFT!"
+"Save: Voltage Error!"
+"Ready" 
+"Incorrect status!"
+"Filling"
+//-----------------------------------------------Kártya bevitel
+"Bowser  .:"
+"Card ERROR"
+"Present card"
+"Present cards"
+"Name:"
+"Vehicle:"
+"PIN: ____    "
+" NameCode"
+//-----------------------------------------------Km óra bevitel
+"Enter odo reading:"
+"Cannot be less than previous!"
+"Please enter one more time!	  "
+"The two entries don’t match!  "
+//-----------------------------------------------Menetlevél bevitel
+"Logbook #:"
+//-----------------------------------------------Tankolhat
+"Refuelling No _ today."
+"Can fill   litres,"
+"another       times."
+//-----------------------------------------------Üzemóra bevitel
+"Engine hours reading:"
+//-----------------------------------------------Mester kártya bevitel
+"Vehicle card code:"
+"<<Back              Not needed"
+"<<Back                        "
+"Clear                         "
+"Cancel                  OK"
+//-----------------------------------------------Menetlevél bevitel
+"Operator code:"
+//-----------------------------------------------Hiba:Kártya
+"Card ERROR"
+//-----------------------------------------------Hiba:Kimerítve
+"Daily allowed"
+"number of fills"
+"   exhausted."
+//-----------------------------------------------Hiba:Rossz kártya 
+to bowser
+"With this card"
+"you may NOT FILL"
+" on this pump !"
+//-----------------------------------------------Szerviz:Belépés
+"Present service card:"
+//-----------------------------------------------Szerviz
+"Maintenance menu:"
+"1-Pumps     2-Card info"
+"3-Settings  4-Variables"
+"5-System "
+//-----------------------------------------------Szervíz:Kútfõk
+"Bowsers:     1-15 pumps on/off"
+//-----------------------------------------------Szerviz:Kártyák
+"Card info:"
+"1 – Number of cards"
+"Single card system "
+"Dual card system   "
+//-----------------------------------------------Szerviz:Beállítások
+"Settings:"
+"1-Display   2-Contrast"
+"3-Time"
+"4-Customize"
+//-----------------------------------------------Maintenance:Settings:LitreDisp
+"Display:"
+"1 – Litres display: ON"
+"1 - Litres display: OFF"
+//----------------------------------------------- Maintenance:Settings:Contrast 
+"Contrast:"
+"1 - decrease     3 –  increase "
+"Temperature:"
+"7 - k decrease   9 - k increase"
+//-----------------------------------------------Szerviz:Testreszabás
+"Customize:"
+"1 - Kms polling: ON-increasing"
+"1 - Kms polling: ON"
+"1 - Kms polling: OFF"
+"2 – Logbook polling: ON"
+"2 - Logbook polling: OFF"
+"3 – Engine hrs polling: ON"
+"3 - Engine hrs polling: OFF"
+"
+//-----------------------------------------------Szerviz:Változók
+"Variables displayed:"
+"Number of fillings:"
+"Number of cards:"
+"Number of firms:"
+//-----------------------------------------------Szerviz:Rendszer
+"System:"
+"Under Development"
+//-----------------------------------------------Nyomtatóra
+"Vendor:"
+"Buyer:"
+"Start meter: __:__:__  __.__.20__ "
+"Stop meter : __:__:__  __.__.20__ "
+"Person     : ____________________ "
+"Rendszám   : ____________________ "
+"Odometer   :          ________ kms"
+"Engine hours       :   ________hrs"
+"Logbook #          :   ________   "
+"Filling          Nr:     _____/_  "
+"Counter reading   V:__________,__l"
+"Cumulative volumeVo:__________,__l"
+"Dispensed volume   Vt: ______,__ l"
+"Product temperat.   t:    ___,_ °C"
+"Product name:                     "};
+"   Petrol 95octane max.10ppm Sulph"
+"    UN 1202 DIESEL,   3,III,(D/I) "
+"Base temperature   to:     15,0 °C"
+"Volume at to       Vo: ______,__ l"
+"Unit price(net) :$ 00000000,00 $/l"
+"Price (net)         :00000000,00 $"
+"Price (gross)       :00000000,00 $"
+//===============================================END

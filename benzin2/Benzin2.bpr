@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.05.03"/>
+    <PROJECT value="Benzin2.exe"/>
+    <OBJFILES value="Benzin2.obj cBeall.obj cFlsClear.obj cVezerlo.obj cBenzMnt.obj 
+      cCardKonv.obj cEEpromInit.obj cOraBe.obj cNyomtato.obj cAnalog.obj 
+      cTxtBenzin.obj cUdpalap.obj cSzintmero.obj cModBusSoros.obj cTeszt.obj 
+      cKutfoTst.obj cTankTst.obj cUjKartyaBe.obj cCegnevek.obj cArak.obj 
+      cGyurus.obj cUpgrade.obj cMemo.obj cHexFile.obj cSzintTbl.obj"/>
+    <RESFILES value="Benzin2.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) cBeall.dfm cFlsClear.dfm cVezerlo.dfm cBenzMnt.dfm 
+      cCardKonv.dfm cEEpromInit.dfm cOraBe.dfm cNyomtato.dfm cAnalog.dfm 
+      cSzintmero.dfm cTeszt.dfm cKutfoTst.dfm cTankTst.dfm cUjKartyaBe.dfm 
+      cCegnevek.dfm cArak.dfm cGyurus.dfm cUpgrade.dfm cMemo.dfm cHexFile.dfm 
+      cSzintTbl.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="CPORTLIBCB5.lib VCL50.lib"/>
+    <SPARELIBS value="VCL50.lib CPORTLIBCB5.lib"/>
+    <PACKAGES value="VCL50.bpi VCLX50.bpi bcbsmp50.bpi dclocx50.bpi bcb2kaxserver50.bpi 
+      CPORTLIBCB5.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="tlink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="Benzin2.cpp"/>
+    <INCLUDEPATH value="FejTeszt;$(BCB)\Lib;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="FejTeszt;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\lib;$(BCB)\Projects"/>
+    <WARNINGS value="-w-par"/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl50.csm -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c -tW 
+      -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$O- -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1038
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=8
+Item0=$(BCB)\Lib;$(BCB)\include;$(BCB)\include\vcl
+Item1=$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\soros;$(BCB)\Cport;..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item3=$(BCB)\Cport;..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item4=C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item5=..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;..\TESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item6=..\TESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item7=C:\Program Files\Borland\CBuilder5\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=9
+Item0=$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\lib;$(BCB)\Projects
+Item1=$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Projects\lib
+Item2=$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\soros;$(BCB)\Cport;..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item4=$(BCB)\Cport;..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item5=C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item6=..\..\KOZTERUL\SORREND2\KOKOZ\WTESZT;..\TESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item7=..\TESZT;C:\Program Files\Borland\CBuilder5\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item8=C:\Program Files\Borland\CBuilder5\Projects;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>
