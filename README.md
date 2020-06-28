@@ -12,3 +12,6 @@
 ####  Comilation errors:
 - undefined reference to `ClrWdt': Replace ClrWdt() with asm("clrwdt");
 - undefined reference to `Nop': Replace Nop()    with asm("nop");
+
+### Device documentation
+http://ww1.microchip.com/downloads/en/DeviceDoc/70593d.pdf
