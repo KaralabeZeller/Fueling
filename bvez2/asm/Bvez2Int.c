@@ -228,7 +228,7 @@ void	RealTime1ms(void)
 {
 uint8_t		k;
 
-ClrWdt();
+asm("clrwdt");
 Soros_232_1ms();							//RS232-PC
 
 if(LedHibaTime > 0)	{ LedHibaTime--; LED_HIBA= 1; }	else{ LED_HIBA= 0; }	

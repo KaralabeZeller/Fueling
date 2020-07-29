@@ -104,7 +104,7 @@ _WriteI2C(0xde | 0x01);			//Write control byte for read
 _IdleI2C();						//wait for bus Idle
 
 I2C1CONbits.RCEN=1;				//Enable Master receive
-Nop();
+asm("nop");
 while(!I2C1STATbits.RBF);		//Wait for receive bufer to be full
 dat=I2C1RCV;					//Return data in buffer
 
@@ -131,7 +131,7 @@ _WriteI2C(0xae | 0x01);			//Write control byte for read
 _IdleI2C();						//wait for bus Idle
 
 I2C1CONbits.RCEN=1;				//Enable Master receive
-Nop();
+asm("nop");
 while(!I2C1STATbits.RBF);		//Wait for receive bufer to be full
 dat=I2C1RCV;					//Return data in buffer
 

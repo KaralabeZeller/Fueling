@@ -352,7 +352,7 @@ Timer2InterruptInit();
 Timer3InterruptInit();
 Timer4InterruptInit();
 Timer6InterruptInit();
-ClrWdt();
+asm("clrwdt");
 TimerPllStart();
 
 Beeper_Init();
